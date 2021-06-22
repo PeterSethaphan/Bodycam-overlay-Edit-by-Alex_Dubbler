@@ -1,0 +1,134 @@
+<!-- made by some no name -->
+<!-- some stuff edited by Alex_Dubbler -->
+<!-- have a good using! -->
+<!-- to change information for bodycam overlay: -->
+<!-- go to line 11 and change it omg common sense -->
+<!-- you can see the script thing down below. you can edit its content..... -->
+<!-- .....EXCEPT the <script> tags itself -->
+
+<script>
+
+    // * * *  You can edit information below
+
+    const bodycam_name = "AXON BODYCAM"; // name of bodycam company
+    const player = "Alex_Dubbler"; // Your first and last name OR username
+    const agency = "Mano County Sheriff's Office"; // Your department name
+    const callsign = "M1-90"; // Unitnumbers AKA Callsign
+    const rank = "Captain"; // Your rank or whatever you wanna put there
+    const logo_source = "MCSO_new_logo.png"; // path (source) to logo
+    
+    // * * *  You can edit information above
+
+</script>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&effect=outline" rel="stylesheet" type="text/css"> 
+    
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>AXON Bodycam Overlay</title>
+    </head>
+
+    <body>
+        <div class="top-right-container">
+            <div class="top-right">
+                <img id="deptLogo" src="" width="60" height="64">
+            </div>
+            <div class="top-right">
+                REC&nbsp;<i class="fa fa-circle text-danger Blink"></i>&nbsp;&nbsp;<p id="bodycamName" style="display: inline-block; margin: 0; padding: 0;">XXX</p>&trade;&nbsp;&nbsp;<br />
+                <span id="player">XXX</span>
+                <span id="callsign">000</span>
+                <span id="rank">XXX</span>&nbsp;&nbsp;<br />
+                <span id="agency">XXX</span>&nbsp;&nbsp;<br />                
+                <span style="padding:0;margin:0;" id="day">00</span>
+                <span style="padding:0;margin:0;" id="month">XXX</span>
+                <span style="padding:0;margin:0;" id="year">0000</span>&nbsp;
+                <span style="padding:0;margin:0;" id="hr">00</span>
+                <span style="padding:0;margin:0;">:</span>
+                <span style="padding:0;margin:0;" id="min">00</span>
+                <span style="padding:0;margin:0;">:</span>
+                <span style="padding:0;margin:0;" id="sec">00</span>
+                <span style="padding:0;margin:0;" id="tz">XX</span>&nbsp;&nbsp;
+            </div>
+        </div>
+    </body>
+    
+    <script defer>
+
+
+
+        // * * *  DO NOT edit below if you know what you are doing!
+
+
+        var link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+            link = document.createElement('link');
+            link.rel = 'icon';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+        link.href = logo_source;
+
+
+        document.getElementById('deptLogo').src=logo_source;   
+        var d,h,m,s,animate;
+        const monthNames = ["JAN","FEB", "MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+
+        function init(){
+            d=new Date();
+            h=d.getHours();
+            m=d.getMinutes();
+            s=d.getSeconds();
+            t=d.toLocaleString('en', {timeZoneName:'short'}).split(' ').pop();
+            clock();
+            day=d.getDate();
+            month=d.getMonth();
+            year=d.getFullYear() + " |";
+            
+        };
+
+        function clock(){
+            s++;
+            if(s==60){
+                s=0;
+                m++;
+                if(m==60){
+                    m=0;
+                    h++;
+                    if(h==24){
+                        h=0;
+                    }
+                }
+            }
+            $('sec', `${s} |`);
+            $('min', m);
+            $('hr', h);
+            $('tz', t);
+            $('day', day);
+            $('year', year);
+            $('month', `${monthNames[month]} |`);
+            $('player', player);
+            $('agency', agency);
+            $('callsign', `| ${callsign}`);
+            $('rank', ` | ${rank}`);
+            $('bodycamName', bodycam_name);
+            animate=setTimeout(clock,1000);
+        };
+
+        function $(id,val){
+            if(val<10){
+                val='0'+val;
+            }
+            document.getElementById(id).innerHTML=val;
+        };
+
+        window.onload=init;
+    </script>
+
+</html>

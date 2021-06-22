@@ -1,4 +1,4 @@
-# # # CREDITS TO ALEX_DUBBLER
+# # # CREDITS TO ALEX_DUBBLER and you for using this!
 # LISENCE - APACHE LISENCE 2.0 (http://www.apache.org/licenses/)- https://en.wikipedia.org/wiki/Apache_License
 
 # CHECK LISENCE ABOVE (APACHE LISENCE 2.0) TO SEE WHAT YOU ARE ALLOWED AND WHAT YOU ARE NOT ALLOWED TO DO!

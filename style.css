@@ -35,9 +35,8 @@ body {
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
-
 #main_container {
-    float: right;
+    float: left;
     text-align: right;
     background-color: rgba(0,0,0,0.5);
 }

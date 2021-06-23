@@ -4,6 +4,7 @@
 
 let link = document.querySelector("link[rel~='icon']");
 let deptLogo = document.getElementById('deptLogo');
+let overlay = document.getElementById('main_container');
 
 // Checking something for changing the page logo
 if (!link) {
@@ -29,13 +30,103 @@ background_color = background_color.concat(boofer);
 background_color.push(")");
 background_color = background_color.join('');
 
-document.getElementById('main_container').style.backgroundColor = background_color;
+overlay.style.backgroundColor = background_color;
 document.getElementById('info_container').style.color = text_color;
 document.getElementById('Blink').style.color = blinker_color;
 
 // Changing logo proportions (height, width)
 deptLogo.style.height = logoHeight;
 deptLogo.style.width = logoWidth;
+
+
+//Changing Bodycam Overlay Position
+overlay.style.position = "block";
+
+switch (horizontal_position) {
+    case "left":
+        overlay.style.float = "left";
+        break;
+
+    case "middle":
+    case "center":
+        overlay.style.position = "absolute";
+        overlay.style.left = "50%";
+        overlay.style.transform = "translate(-50%, 0)";
+        break;
+
+    case "right":
+        overlay.style.float = "right";
+        break;
+
+    default:
+        break;
+}
+
+switch (vertical_position) {
+    case "top":
+        overlay.style.position = "block";
+        break;
+
+
+    case "middle":
+    case "center":
+        
+        overlay.style.position = "absolute";
+        overlay.style.top = "50%";
+        overlay.style.transform = "translate(0, -50%)";
+
+        switch (horizontal_position) {
+            case "left":
+                break;
+
+            case "middle":
+            case "center":
+                overlay.style.left = "50%";
+                overlay.style.transform = "translate(-50%, -50%)";
+                break;
+            
+            case "right":
+                overlay.style.right = "0";
+                overlay.style.transform = "translate(0, -50%)";
+                break;
+        
+            default:
+                break;
+        }
+        break;
+
+        
+    case "bottom":
+    
+        overlay.style.position = "absolute";
+        overlay.style.bottom = "0%";
+        overlay.style.transform = "translate(0, 0)";
+
+        switch (horizontal_position) {
+            case "left":
+                break;
+
+            case "middle":
+            case "center":
+                overlay.style.left = "50%";
+                overlay.style.transform = "translate(-50%, 0%)";
+                break;
+            
+            case "right":
+                overlay.style.right = "0";
+                overlay.style.transform = "translate(0, 0%)";
+                break;
+        
+            default:
+                break;
+        }
+        break;
+    
+    
+
+    default:
+        break;
+}
 
 
 // Department logo, time changing, and other stuff 

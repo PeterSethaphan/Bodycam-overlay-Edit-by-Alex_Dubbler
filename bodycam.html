@@ -2,23 +2,36 @@
 <!-- some stuff edited by Alex_Dubbler -->
 <!-- have a good using! -->
 <!-- to change information for bodycam overlay: -->
-<!-- go to line 11 and change it omg common sense -->
+<!-- go to line 10 and change it omg common sense -->
 <!-- you can see the script thing down below. you can edit its content..... -->
 <!-- .....EXCEPT the <script> tags itself -->
 
 <script>
-
     // * * *  You can edit information below
 
-    const bodycam_name = "AXON BODYCAM"; // name of bodycam company
-    const player = "Alex_Dubbler"; // Your first and last name OR username
-    const agency = "Mano County Sheriff's Office"; // Your department name
-    const callsign = "M1-90"; // Unitnumbers AKA Callsign
-    const rank = "Captain"; // Your rank or whatever you wanna put there
-    const logo_source = "MCSO_new_logo.png"; // path (source) to logo
     
-    // * * *  You can edit information above
 
+    const bodycam_name = "AXON BODYCAM"; // name of bodycam company; default: AXON BODYCAM
+    const player = "Jake Peralta"; // Your first and last name OR username
+    const agency = "Los Santos Police Department"; // Your department name
+    const callsign = "1A22"; // Unitnumbers AKA Callsign
+    const rank = "Captain"; // Your rank or whatever you wanna put there
+    const logo_source = "logos/Logo_lspd.png"; // path (source) to logo file ()
+    const blinker_speed = "-1.5" + "s"; // default value - 1.5 (seconds. we use everything in seconds)
+    // IN ABOVE (ABOVE MEANT - red_blinker_speed VARIABLE) change only numbers, dont change the "s" letter if you dont know what you are doing
+
+    const blinker_color = "#A94442"; // color of blinker; default: #A94442
+    const text_color = "#AFAFAF"; // text color; values can be HEX (#AFAFAF), RGB (rgb(175, 175, 175)), HSL (hsl(0°, 0%, 69%)); default - #AFAFAF
+    var background_color = "rgb(0,0,0)"; // background color; use RGB (rgb(175, 175, 175)); how to use? go to https://www.google.com/search?q=color+picker and pick color then copy rgb thing and put it instead of "here" word: rgb(here). then copy that and put it in the value place (inside the quotes); default value - rgb(0,0,0)
+    var background_opacity = "0.5"; // overlay background opacity - values from 0 to 1; default: 0.5
+    // for 4 properties above - https://www.google.com/search?q=color+picker
+
+    var logoHeight = "65" + "px"; // change only number; and change only if the logo is looking ugly; default value: "65" + "px"
+    var logoWidth = "60" + "px"; // change only number; and change only if the logo is looking ugly; default value; "60" + "px"
+
+
+
+    // * * *  You can edit information above
 </script>
 
 <!DOCTYPE html>
@@ -31,18 +44,20 @@
         <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&effect=outline" rel="stylesheet" type="text/css"> 
     
         <link rel="stylesheet" href="style.css">
+        <script defer type="text/javascript" src="index.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>AXON Bodycam Overlay</title>
     </head>
 
     <body>
-        <div class="top-right-container">
-            <div class="top-right">
-                <img id="deptLogo" src="" width="60" height="64">
+        <div class="alignment-container" id="main_container">
+            <div class="alignment" id="logo_container">
+                <img id="deptLogo" src="" width="60" height="65">
             </div>
-            <div class="top-right">
-                REC&nbsp;<i class="fa fa-circle text-danger Blink"></i>&nbsp;&nbsp;<p id="bodycamName" style="display: inline-block; margin: 0; padding: 0;">XXX</p>&trade;&nbsp;&nbsp;<br />
+            
+            <div class="alignment" id="info_container">
+                REC&nbsp;<i class="fa fa-circle text-danger" id="Blink"></i>&nbsp;&nbsp;<p id="bodycamName" style="display: inline-block; margin: 0; padding: 0;">XXX</p>&trade;&nbsp;&nbsp;<br />
                 <span id="player">XXX</span>
                 <span id="callsign">000</span>
                 <span id="rank">XXX</span>&nbsp;&nbsp;<br />
@@ -60,75 +75,6 @@
         </div>
     </body>
     
-    <script defer>
-
-
-
-        // * * *  DO NOT edit below if you know what you are doing!
-
-
-        var link = document.querySelector("link[rel~='icon']");
-        if (!link) {
-            link = document.createElement('link');
-            link.rel = 'icon';
-            document.getElementsByTagName('head')[0].appendChild(link);
-        }
-        link.href = logo_source;
-
-
-        document.getElementById('deptLogo').src=logo_source;   
-        var d,h,m,s,animate;
-        const monthNames = ["JAN","FEB", "MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
-
-        function init(){
-            d=new Date();
-            h=d.getHours();
-            m=d.getMinutes();
-            s=d.getSeconds();
-            t=d.toLocaleString('en', {timeZoneName:'short'}).split(' ').pop();
-            clock();
-            day=d.getDate();
-            month=d.getMonth();
-            year=d.getFullYear() + " |";
-            
-        };
-
-        function clock(){
-            s++;
-            if(s==60){
-                s=0;
-                m++;
-                if(m==60){
-                    m=0;
-                    h++;
-                    if(h==24){
-                        h=0;
-                    }
-                }
-            }
-            $('sec', `${s} |`);
-            $('min', m);
-            $('hr', h);
-            $('tz', t);
-            $('day', day);
-            $('year', year);
-            $('month', `${monthNames[month]} |`);
-            $('player', player);
-            $('agency', agency);
-            $('callsign', `| ${callsign}`);
-            $('rank', ` | ${rank}`);
-            $('bodycamName', bodycam_name);
-            animate=setTimeout(clock,1000);
-        };
-
-        function $(id,val){
-            if(val<10){
-                val='0'+val;
-            }
-            document.getElementById(id).innerHTML=val;
-        };
-
-        window.onload=init;
-    </script>
+   
 
 </html>

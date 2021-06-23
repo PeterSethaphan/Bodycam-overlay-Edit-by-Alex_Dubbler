@@ -4,8 +4,8 @@
 # CHECK LISENCE ABOVE (APACHE LISENCE 2.0) TO SEE WHAT YOU ARE ALLOWED AND WHAT YOU ARE NOT ALLOWED TO DO!
 
 
-# # # ATTENTION!!!
-# TO SEE OVERLAY ITSELF, JUST OPEN BODYCAM.HTML FILE!
+# # # ATTENTION!!! TO SEE OVERLAY ITSELF, JUST OPEN BODYCAM.HTML FILE!!!
+# DO NOT EDIT INCLUDES FOLDER!!!
 
 
 # XION-ChaseCam
@@ -14,4 +14,7 @@
 # instructions of usage are in the head of the...
 # ... bodycam.html
 
+
+# Put logos in "logos" folder (recommended)
+# do not remove credits when using ok thanks
 # have a good usage and have fun!!!

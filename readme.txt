@@ -20,22 +20,21 @@ CHECK LISENCE ABOVE (APACHE LISENCE 2.0) TO SEE WHAT YOU ARE ALLOWED AND WHAT YO
 
 instructions:
 
-open readme.md or readme.txt and read
-after that open bodycam.html (in notepad)
-and read the beginning
-and then u do what is said there
-and after that
-after like customizing everything
+open readme.md or readme.txt and read;
+after that open bodycam.html (in notepad);
+and read the beginning;
+and then u do what is said there;
+**and after that if you want to work with OBS do following below**:
 
 ==Below is a part for work with OBS==
 
-you just go to obs
-go to sources
-press +
-press browser
-write some name and press ok
-mark that it is a local file
-and put the path to the bodycam.html file
+you just go to obs;
+go to sources;
+press +;
+press browser;
+write **Bodycam** or some other name and press ok;
+mark that it is a local file;
+and put the path to the bodycam.html file;
 
 
 
@@ -45,4 +44,4 @@ and put the path to the bodycam.html file
  have a good usage and have fun!!!
 
 
-*P.S.*: if you are with Mac, good luck...
+*P.S.: if you are with Mac, good luck...*

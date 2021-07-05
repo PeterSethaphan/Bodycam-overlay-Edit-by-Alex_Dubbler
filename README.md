@@ -4,11 +4,16 @@ LISENCE - APACHE LISENCE 2.0 (http://www.apache.org/licenses/)- https://en.wikip
 CHECK LISENCE ABOVE (APACHE LISENCE 2.0) TO SEE WHAT YOU ARE ALLOWED AND WHAT YOU ARE NOT ALLOWED TO DO!
 
 
-# # # ATTENTION!!! TO SEE OVERLAY ITSELF, JUST OPEN BODYCAM.HTML FILE!!!
+# # # ATTENTION!!!
+ TO SEE OVERLAY ITSELF, JUST OPEN BODYCAM.HTML FILE!!!
+
+# Virustotal
+ The archive with the files was checked in virustotal.com (a website that lets you check for viruses).
+ **Virustotal results** - https://www.virustotal.com/gui/file/78ce0e25827367de7630656966a8238a0225bfc975abf0d668df7e0e444d5b64/detection
 
 
 
-# XION-ChaseCam
+# AXON Bodycam Overlay
  EDITED BY Alex_Dubbler
  idk who this was made by but ok
  instructions of usage are in the head of the...

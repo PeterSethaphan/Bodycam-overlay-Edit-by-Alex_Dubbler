@@ -23,7 +23,18 @@ CHECK LISENCE ABOVE (APACHE LISENCE 2.0) TO SEE WHAT YOU ARE ALLOWED AND WHAT YO
 
 # Some instructions:
 
-instructions:
+**Instructions Number 1 (how to install the file):**
+
+Do everything what is shown in GIF below
+![Press green "Code" button then download the ZIP](http://url/to/img.png)
+
+(for people who can't understand: Press green "Code" button then download the ZIP)
+
+After that unarchive that with your archivator (like WinRar, 7zip and etc; by the way, 7zip is free!)
+Then follow instructions 3 and 4 below!
+
+
+**Instructions Number 2 (how to configure):**
 
 open readme.md or readme.txt and read;
 after that open bodycam.html (in notepad);
@@ -31,7 +42,8 @@ and read the beginning;
 and then u do what is said there;
 **and after that if you want to work with OBS do following below**:
 
-==Below is a part for work with OBS==
+
+**Instructions Number 3 (==Below is a part for work with OBS==):**
 
 you just go to obs;
 go to sources;

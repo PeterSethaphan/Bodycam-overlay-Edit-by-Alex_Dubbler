@@ -56,7 +56,7 @@ and put the path to the bodycam.html file;
 
 
 
-# Put logos in "logos" folder (recommended)
+##### Put logo files in "logos" folder
  do not remove credits when using ok thanks
  have a good usage and have fun!!!
 

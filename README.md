@@ -62,3 +62,7 @@ and put the path to the bodycam.html file;
 
 
 *P.S.: if you are with Mac, good luck...*
+
+<br> <br>
+
+For troubleshooting and other issues/problems write me on Discord: Alex_Dubbler.#0001

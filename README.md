@@ -25,8 +25,8 @@ CHECK LISENCE ABOVE (APACHE LISENCE 2.0) TO SEE WHAT YOU ARE ALLOWED AND WHAT YO
 
 ## **Instructions Number 1 (how to install the file):**
 
-Do everything what is shown in GIF below
-![Press green "Code" button then download the ZIP](https://bit.ly/3hoA8wz)
+Do everything what is shown in GIF below <br>
+![Press green "Code" button then download the ZIP](https://bit.ly/3hoA8wz) <br>
 
 (for people who can't understand: Press green "Code" button then download the ZIP)
 
